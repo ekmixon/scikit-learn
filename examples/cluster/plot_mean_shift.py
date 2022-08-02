@@ -11,6 +11,7 @@ Machine Intelligence. 2002. pp. 603-619.
 
 """
 
+
 import numpy as np
 from sklearn.cluster import MeanShift, estimate_bandwidth
 from sklearn.datasets import make_blobs
@@ -48,7 +49,7 @@ colors = cycle("bgrcmykbgrcmykbgrcmykbgrcmyk")
 for k, col in zip(range(n_clusters_), colors):
     my_members = labels == k
     cluster_center = cluster_centers[k]
-    plt.plot(X[my_members, 0], X[my_members, 1], col + ".")
+    plt.plot(X[my_members, 0], X[my_members, 1], f"{col}.")
     plt.plot(
         cluster_center[0],
         cluster_center[1],

@@ -23,6 +23,7 @@ Brier score.
 
 """
 
+
 # Author: Mathieu Blondel <mathieu@mblondel.org>
 #         Alexandre Gramfort <alexandre.gramfort@telecom-paristech.fr>
 #         Balazs Kegl <balazs.kegl@gmail.com>
@@ -99,8 +100,9 @@ for this_y, color in zip(y_unique, colors):
         c=color[np.newaxis, :],
         alpha=0.5,
         edgecolor="k",
-        label="Class %s" % this_y,
+        label=f"Class {this_y}",
     )
+
 plt.legend(loc="best")
 plt.title("Data")
 
